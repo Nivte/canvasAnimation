@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="./canvas.js"></script>
+  </head>
+  <body>
+    <h1 id="mainTitle">History of Evolution</h1>
+    <img id="trail" src="evolution.png" alt="" />
+
+    <canvas id="theCanvas"> </canvas>
+    <canvas id="temporizador"></canvas>
+    <button id="theButton">Develop</button>
+    <h1 id="stageTitle">Stage</h1>
+    <h1 id="theStage">-1</h1>
+    <h1 id="time">Time:</h1>
+  </body>
+  <style>
+    #mainTitle {
+      text-align: center;
+
+      font-size: 10vh;
+    }
+    #trail {
+      height: 30vh;
+      width: 40vw;
+      position: absolute;
+      top: 30vh;
+      left: 50vw;
+    }
+    #theCanvas {
+      height: 30vh;
+      width: 25vw;
+      position: absolute;
+      top: 30vh;
+      left: 15vw;
+
+      border: 0.3vh solid black;
+    }
+    #theButton {
+      height: 5vh;
+      width: 10vw;
+      font-size: 2.5vh;
+      position: absolute;
+      left: 8vw;
+      top: 12vh;
+    }
+    #theStage {
+      height: 7vh;
+      width: 5vw;
+      position: absolute;
+      left: 30vw;
+      top: 15vh;
+      color: white;
+      font-size: 4vh;
+      background-color: black;
+      text-align: center;
+      padding-top: 2vh;
+      border-radius: 30%;
+    }
+    #stageTitle {
+      height: 5vh;
+      width: 9vw;
+      font-size: 2.5vh;
+      position: absolute;
+      left: 22vw;
+      top: 16.5vh;
+      color: white;
+      font-size: 4vh;
+      background-color: black;
+      text-align: center;
+      padding-top: 1vh;
+      padding-inline: 0.5vw;
+    }
+    #temporizador {
+      height: 5vh;
+      width: 25vw;
+      position: absolute;
+      top: 60vh;
+      left: 15vw;
+
+      border: 0.3vh solid black;
+    }
+    #time {
+      height: 3.5vh;
+      width: 5vw;
+      font-size: 4vh;
+      position: absolute;
+      left: 7.5%;
+      top: 57vh;
+      color: black;
+      font-size: 4vh;
+      background-color: yellow;
+      text-align: center;
+      padding: 1vh;
+
+      border-radius: 20%;
+    }
+  </style>
+</html>
