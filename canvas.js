@@ -16,7 +16,7 @@ const spriteHeight = 100;
 let x = 0;
 //motion set
 let inicial= -10
-let motion = 50;
+let motion = 53;
 let frame = -1;
 // let slower= 0
 // let howSlow= 70
@@ -39,7 +39,7 @@ function move() {
     100,
     220,
     0,
-    0,
+    -50,
     1000,
     1200
   );
@@ -50,7 +50,7 @@ function move() {
   }
   // change by button (frame)
   frame++;
-  inicial=25
+  inicial=22
   if (frame > 4) {
     frame = 0;
   }
