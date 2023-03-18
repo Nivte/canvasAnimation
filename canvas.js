@@ -15,13 +15,14 @@ const spriteHeight = 100;
 // later will be the block's location
 let x = 0;
 //motion set
+let inicial= 0
 let motion = 53;
 let frame = -1;
 // let slower= 0
 // let howSlow= 70
 
 //what stays empty in the workzone (by sizes)
-// workZone.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+workZone.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 // //what is filled with color in the workzone (by sizes)
 // workZone.fillRect(x, 50, 50, 100);
 //show the image i attached on the screen, according to location i set.
@@ -33,7 +34,7 @@ $button.addEventListener("click", move);
 function move() {
   workZone.drawImage(
     figure,
-    22 + motion * frame,
+    inicial+ (motion*frame),
     20,
     100,
     220,
@@ -49,6 +50,7 @@ function move() {
   }
   // change by button (frame)
   frame++;
+  inicial=22
   if (frame > 4) {
     frame = 0;
   }
