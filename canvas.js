@@ -15,8 +15,8 @@ const spriteHeight = 100;
 // later will be the block's location
 let x = 0;
 //motion set
-let inicial= 0
-let motion = 53;
+let inicial= -10
+let motion = 50;
 let frame = -1;
 // let slower= 0
 // let howSlow= 70
@@ -50,7 +50,7 @@ function move() {
   }
   // change by button (frame)
   frame++;
-  inicial=22
+  inicial=25
   if (frame > 4) {
     frame = 0;
   }
