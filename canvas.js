@@ -1,10 +1,16 @@
 let $canvas = document.getElementById("theCanvas");
+//"getcontext("2d")" gives the canvas some style properties
 let workZone = $canvas.getContext("2d");
 let CANVAS_WIDTH = ($canvas.width = 600);
 let CANVAS_HEIGHT = ($canvas.height = 600);
 
 let $button = document.getElementById("theButton");
 let $stage = document.getElementById("theStage");
+
+let $secondCanvas = document.getElementById("secondCanvas");
+let secondWorkZone = $secondCanvas.getContext("2d");
+
+console.log($canvas.getContext("2d"));
 
 const figure = new Image();
 figure.src = "evolution.png";
@@ -15,14 +21,14 @@ const spriteHeight = 100;
 // later will be the block's location
 let x = 0;
 //motion set
-let inicial= -10
+let inicial = -10;
 let motion = 53;
 let frame = -1;
 // let slower= 0
 // let howSlow= 70
 
 //what stays empty in the workzone (by sizes)
-workZone.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+// workZone.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
 // //what is filled with color in the workzone (by sizes)
 // workZone.fillRect(x, 50, 50, 100);
 //show the image i attached on the screen, according to location i set.
@@ -34,7 +40,7 @@ $button.addEventListener("click", move);
 function move() {
   workZone.drawImage(
     figure,
-    inicial+ (motion*frame),
+    inicial + motion * frame,
     20,
     100,
     220,
@@ -50,7 +56,7 @@ function move() {
   }
   // change by button (frame)
   frame++;
-  inicial=22
+  inicial = 22;
   if (frame > 4) {
     frame = 0;
   }
@@ -82,7 +88,7 @@ let TEMPO_HEIGHT = ($temporizador.height = 600);
 let year = 0;
 
 //what stays empty in the workzone (by sizes)
-vase.clearRect(0, 0, TEMPO_WIDTH, TEMPO_HEIGHT);
+// vase.clearRect(0, 0, TEMPO_WIDTH, TEMPO_HEIGHT);
 
 $button.addEventListener("click", age);
 vase.fillStyle = "yellow";
@@ -102,3 +108,21 @@ function age() {
 // fill();
 
 //what is filled with color in the timer (by sizes)
+
+let x2 = 0;
+
+function roll() {
+  secondWorkZone.clearRect(0, 0, 300, 300);
+  secondWorkZone.fillRect(x2, 0, 300, 150);
+
+  x2 += 0.35;
+
+  if (x2 > 300) {
+    setTimeout(() => {
+      x2 = 0;
+    }, 1500);
+  }
+
+  requestAnimationFrame(roll);
+}
+roll();
