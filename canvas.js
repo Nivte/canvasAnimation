@@ -109,6 +109,8 @@ function age() {
 
 //what is filled with color in the timer (by sizes)
 
+
+
 let x2 = 0;
 
 function roll() {
