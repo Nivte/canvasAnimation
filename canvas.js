@@ -115,7 +115,7 @@ function roll() {
   secondWorkZone.clearRect(0, 0, 300, 300);
   secondWorkZone.fillRect(x2, 0, 300, 150);
 
-  x2 += 0.5;
+  x2 += 0.4;
 
   if (x2 > 300) {
     // $secondCanvas.style.backgroundColor="black";
