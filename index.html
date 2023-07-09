@@ -17,7 +17,7 @@
     <h1 id="stageTitle">Stage</h1>
     <h1 id="theStage">-1</h1>
     <h1 id="time">Time:</h1>
-    <canvas id="secondCanvas">lklk;l;l </canvas>
+    <canvas id="secondCanvas"> </canvas>
   </body>
   <style>
     #mainTitle {
@@ -88,10 +88,10 @@
     }
     #time {
       height: 4vh;
-      width: 5vw;
+      width: 8vw;
       font-size: 4vh;
       position: absolute;
-      left: 7.5%;
+      left: 4vw;
       top: 62.5vh;
       color: black;
       font-size: 4vh;
@@ -107,8 +107,14 @@
       position: absolute;
       top: 35vh;
       left: 50vw;
-
+      transition: color;
       border: 0.3vh solid black;
+
+      transition: 4s;
+    }
+
+    .black1 {
+      background-color: black;
     }
 
     @media screen and (min-width: 0px) and (max-width: 400px) {

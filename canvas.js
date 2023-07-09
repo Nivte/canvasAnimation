@@ -109,19 +109,25 @@ function age() {
 
 //what is filled with color in the timer (by sizes)
 
-
-
 let x2 = 0;
 
 function roll() {
   secondWorkZone.clearRect(0, 0, 300, 300);
   secondWorkZone.fillRect(x2, 0, 300, 150);
 
-  x2 += 0.35;
+  x2 += 0.5;
 
   if (x2 > 300) {
+    // $secondCanvas.style.backgroundColor="black";
+
     setTimeout(() => {
-      x2 = 0;
+      $secondCanvas.classList.add("black1");
+
+      setTimeout(() => {
+        $secondCanvas.classList.remove("black1");
+
+        x2 = 0;
+      }, 3000);
     }, 1500);
   }
 
