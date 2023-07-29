@@ -8,6 +8,7 @@
     <script defer src="./canvas.js"></script>
   </head>
   <body>
+    <p class="back"></p>
     <h1 id="mainTitle">History of Evolution</h1>
     <img id="trail" src="evolution.png" alt="" />
 
@@ -20,10 +21,22 @@
     <canvas id="secondCanvas"> </canvas>
   </body>
   <style>
-    #mainTitle {
-      text-align: center;
 
-      font-size: 10vh;
+body {
+  margin: 0;
+}
+
+    .back {
+      background-image: url("backpic.jpeg");
+      height: 150vh;
+    }
+
+    #mainTitle {
+      position: absolute;
+      top: 3vh;
+      left: 34vw;
+
+      font-size: 8vh;
     }
     #trail {
       height: 30vh;
@@ -107,7 +120,7 @@
       position: absolute;
       top: 35vh;
       left: 50vw;
-      transition: color;
+      /* transition: color; */
       border: 0.3vh solid black;
 
       transition: 4s;
@@ -117,7 +130,7 @@
       background-color: black;
     }
 
-    @media screen and (min-width: 0px) and (max-width: 400px) {
+    @media screen and (min-width: 0px) and (max-width: 700px) {
       #mainTitle {
         font-size: 4vh;
       }
